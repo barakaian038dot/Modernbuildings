@@ -1,12 +1,38 @@
-.external-paragraph {
-    color: purple;
-    text-decoration: underline;
-}
+/* ============================================
+   style.css — External CSS (3 mks)
+   Modern Buildings Assignment
+   ============================================ */
 
+/* External H1 */
 .external-h1 {
-    color: blue;
+  color: #f48fb1;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
 }
 
+/* External Paragraph */
+.external-paragraph {
+  color: #ffe082;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 12px 0;
+}
+
+/* External H3 */
 .external-h3 {
-    color: teal;
+  color: #80cbc4;
+  font-size: 1.15rem;
+  margin: 10px 0;
+}
+
+/* External Container (used on the Buildings section) */
+.external-container {
+  background: linear-gradient(135deg, rgba(244,143,177,0.08), rgba(79,195,247,0.08));
+  border: 1px solid rgba(244,143,177,0.3);
+  border-radius: 14px;
+  padding: 28px;
+  margin: 24px 0;
 }
