@@ -1,74 +1,276 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Modern Buildings</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Buildings</title>
 
-    <!-- Internal CSS -->
-    <style>
-        .internal-paragraph {
-            color: orange;
-            font-weight: bold;
-        }
+  <!-- ⑤ Internal CSS (3 mks) -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .internal-h1 {
-            color: green;
-        }
+    body {
+      background-color: #0d1b2a;
+      font-family: 'Georgia', serif;
+      color: #e8dcc8;
+      min-height: 100vh;
+    }
 
-        .internal-h3 {
-            color: brown;
-        }
-    </style>
+    /* ① Center Content */
+    .page-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    .internal-h1 {
+      color: #4fc3f7;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .internal-h3 {
+      color: #ffb347;
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .internal-paragraph {
+      color: #c8e6c9;
+      font-weight: bold;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 12px 0;
+    }
+
+    /* ③ Containers */
+    .container {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 24px 0;
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(79,195,247,0.15);
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      margin: 16px 0;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #ffffff;
+      text-shadow: 0 0 30px rgba(79,195,247,0.5);
+      margin-bottom: 6px;
+    }
+
+    .hero-sub {
+      color: #90a4ae;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #4fc3f7;
+      color: #0d1b2a;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .gallery img {
+      border-radius: 8px;
+      border: 2px solid #4fc3f7;
+      object-fit: cover;
+    }
+
+    video {
+      border-radius: 10px;
+      border: 2px solid #ffb347;
+      margin-top: 14px;
+      max-width: 100%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      font-size: 0.95rem;
+    }
+
+    thead tr {
+      background: #4fc3f7;
+      color: #0d1b2a;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      border: 1px solid rgba(255,255,255,0.18);
+      text-align: left;
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.06);
+    }
+
+    tbody tr:hover {
+      background: rgba(79,195,247,0.12);
+    }
+
+    caption {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffb347;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  </style>
+
+  <!-- ⑥ External CSS (3 mks) -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="page-wrapper">
 
-    <!-- H1 Highlights -->
-    <h1 style="color: red;">Highlight 1 - Skyscrapers</h1>
+    <!-- CONTAINER 1: Hero -->
+    <div class="container" style="border-color: rgba(79,195,247,0.4); padding: 48px 32px;">
+      <p class="hero-sub">Architecture &amp; Design</p>
+      <!-- ④ Inline CSS -->
+      <h1 class="hero-title" style="color: #ffffff;">Modern Buildings</h1>
+      <p style="color: #90a4ae; margin-top: 12px; font-size: 0.95rem;">
+        Exploring the future of architecture — skyscrapers, smart homes, and sustainable cities.
+      </p>
+    </div>
 
-    <h1 class="internal-h1">Highlight 2 - Smart Buildings</h1>
+    <!-- CONTAINER 2: H1 Headlines -->
+    <div class="container">
+      <h2 style="color: #ffb347; margin-bottom: 18px; letter-spacing: 2px;">
+        H1 HIGHLIGHTS <span class="badge">3 types of CSS</span>
+      </h2>
+      <hr class="divider"/>
+      <h1 style="color: red;">Highlight 1 – Skyscrapers</h1>
+      <h1 class="internal-h1">Highlight 2 – Smart Buildings</h1>
+      <h1 class="external-h1">Highlight 3 – Future Cities</h1>
+    </div>
 
-    <h1 class="external-h1">Highlight 3 - Future Cities</h1>
-
-
-    <!-- Paragraphs -->
-    <p style="color: blue; font-style: italic;">
+    <!-- CONTAINER 3: Paragraphs -->
+    <div class="container">
+      <h2 style="color: #4fc3f7; margin-bottom: 18px; letter-spacing: 2px;">PARAGRAPHS</h2>
+      <hr class="divider"/>
+      <p style="color: #64b5f6; font-style: italic; margin: 12px 0; line-height: 1.8;">
         Paragraph 1: Modern buildings are designed with creativity and innovation.
-    </p>
-
-    <p class="internal-paragraph">
+      </p>
+      <p class="internal-paragraph">
         Paragraph 2: Architects use advanced technology to design smart homes.
-    </p>
-
-    <p class="external-paragraph">
+      </p>
+      <p class="external-paragraph">
         Paragraph 3: Sustainable buildings help protect the environment.
-    </p>
+      </p>
+    </div>
 
+    <!-- CONTAINER 4: Buildings -->
+    <div class="container external-container">
+      <h2 style="color: #80cbc4; margin-bottom: 18px; letter-spacing: 2px;">FEATURED BUILDINGS</h2>
+      <hr class="divider"/>
+      <h3 style="color: darkred; margin: 10px 0;">🏙 Building 1 – Burj Khalifa</h3>
+      <h3 class="internal-h3">🏛 Building 2 – Empire State</h3>
+      <h3 class="external-h3">🔮 Building 3 – Future Tower</h3>
 
-    <!-- H3 Buildings -->
-    <h3 style="color: darkred;">Building 1 - Burj Khalifa</h3>
+      <table>
+        <caption>Famous Buildings at a Glance</caption>
+        <thead>
+          <tr>
+            <th>Building</th>
+            <th>Location</th>
+            <th>Height (m)</th>
+            <th>Year Built</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Burj Khalifa</td><td>Dubai, UAE</td><td>828</td><td>2010</td></tr>
+          <tr><td>Empire State</td><td>New York, USA</td><td>443</td><td>1931</td></tr>
+          <tr><td>Future Tower</td><td>Concept City</td><td>1,200+</td><td>2040 (est.)</td></tr>
+          <tr><td>Shanghai Tower</td><td>Shanghai, China</td><td>632</td><td>2015</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-    <h3 class="internal-h3">Building 2 - Empire State</h3>
+    <!-- CONTAINER 5: Stats Table -->
+    <div class="container">
+      <h2 style="color: #ffb347; margin-bottom: 18px; letter-spacing: 2px;">ARCHITECTURE STATS</h2>
+      <hr class="divider"/>
+      <table>
+        <caption>Common Construction Materials</caption>
+        <thead>
+          <tr>
+            <th>Material</th>
+            <th>Type</th>
+            <th>Strength</th>
+            <th>Eco-Friendly</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Reinforced Concrete</td><td>Composite</td><td>Very High</td><td>Moderate</td></tr>
+          <tr><td>Structural Steel</td><td>Metal</td><td>Excellent</td><td>Recyclable</td></tr>
+          <tr><td>Cross-Laminated Timber</td><td>Wood</td><td>High</td><td>✅ Yes</td></tr>
+          <tr><td>Glass Fibre Composite</td><td>Composite</td><td>Moderate</td><td>Partial</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-    <h3 class="external-h3">Building 3 - Future Tower</h3>
+    <!-- CONTAINER 6: Gallery -->
+    <div class="container">
+      <h2 style="color: #4fc3f7; margin-bottom: 18px; letter-spacing: 2px;">GALLERY</h2>
+      <hr class="divider"/>
+      <div class="gallery">
+        <img src="image1.jpg" width="280" height="180" alt="Building 1" style="filter: brightness(0.85) saturate(1.2);" />
+        <img src="image2.jpg" width="280" height="180" alt="Building 2" style="filter: brightness(0.85) saturate(1.2);" />
+        <img src="image3.jpg" width="280" height="180" alt="Building 3" style="filter: brightness(0.85) saturate(1.2);" />
+      </div>
+    </div>
 
-
-    <!-- Images -->
-    <h2>Gallery</h2>
-
-    <img src="image1.jpg" width="300">
-    <img src="image2.jpg" width="300">
-    <img src="image3.jpg" width="300">
-
-    <!-- Video -->
-    <h2>Watch This Video</h2>
-
-    <video width="400" controls>
+    <!-- CONTAINER 7: Video -->
+    <div class="container" style="border-color: rgba(255,179,71,0.35);">
+      <h2 style="color: #ffb347; margin-bottom: 10px; letter-spacing: 2px;">WATCH THIS VIDEO</h2>
+      <hr class="divider"/>
+      <video width="480" controls>
         <source src="video.mp4" type="video/mp4">
         Your browser does not support video.
-    </video>
+      </video>
+    </div>
 
+    <p style="color: #37474f; font-size: 0.8rem; margin-top: 40px; letter-spacing: 2px;">
+      MODERN BUILDINGS · ASSIGNMENT · TOTAL – 20 MKS
+    </p>
+
+  </div>
 </body>
 </html>
